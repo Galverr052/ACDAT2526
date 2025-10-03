@@ -9,7 +9,7 @@ public class ClientesApp {
         File fcontadores = new File("res" + File.separator + "contadores.csv");
         File fclientes = new File("res" + File.separator + "clientes.csv");
 
-        File resultFile = gestiona.consumoSiministros(fmediciones);
+        File resultFile = gestiona.consumoSuministros(fmediciones);
 
         if (resultFile != null)
             System.out.println("Archivo de consumo generado en: " + resultFile.getAbsolutePath());
