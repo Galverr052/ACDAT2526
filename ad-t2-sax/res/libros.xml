@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE Libros SYSTEM "libros.dtd">
+
+<Libros>
+	<Libro>
+		<Fecha>1840</Fecha>
+		<Titulo>El Capote</Titulo>
+		<Autor>Nikolai Gogol</Autor>
+	</Libro>
+	<Libro>
+		<Fecha>2000</Fecha>
+		<Titulo>Data on the Web</Titulo>
+		<Autor>Serge Abiteboul</Autor>
+	</Libro>
+	<Libro>
+		<Fecha>1999</Fecha>
+		<Titulo>Economics of Technology for Digital</Titulo>
+		<Autor>Darcy Gerbarg</Autor>
+	</Libro>
+	<Libro>
+		<Fecha>2021</Fecha>
+		<Titulo>Hamnet</Titulo>
+		<Autor>Maggie Farrell</Autor>
+	</Libro>
+	<Libro>
+		<Fecha>2021</Fecha>
+		<Titulo>Volver a dónde</Titulo>
+		<Autor>Antonio Muñoz Molina</Autor>
+	</Libro>
+</Libros>

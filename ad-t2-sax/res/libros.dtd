@@ -1,0 +1,6 @@
+<!-- Gramática DTD asociada -->
+<!ELEMENT Libros (Libro*)>
+<!ELEMENT Libro (Fecha,Titulo,Autor)>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Autor (#PCDATA)>
