@@ -4,21 +4,21 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Estación implements Serializable {
+public class Estacion implements Serializable {
     private int codigo;
-    private String descripción;
+    private String descripcion;
     private float latitud;
     private float longitud;
 
-    private String direccción;
+    private String direccion;
     private int cp;
-    private String población;
+    private String poblacion;
     private String provincia;
     private List<TramoHora> tramos;
 
-    public Estación(int codigo, String descripción, String provincia) {
+    public Estacion(int codigo, String descripción, String provincia) {
         this.codigo = codigo;
-        this.descripción = descripción;
+        this.descripcion = descripción;
         this.provincia = provincia;
         this.tramos = new ArrayList<>();
     }
@@ -27,8 +27,8 @@ public class Estación implements Serializable {
     public int getCodigo() {
         return codigo;
     }
-    public String getDescripción() {
-        return descripción;
+    public String getDescripcion() {
+        return descripcion;
     }
     public float getLatitud() {
         return latitud;
@@ -36,14 +36,14 @@ public class Estación implements Serializable {
     public float getLongitud() {
         return longitud;
     }
-    public String getDireccción() {
-        return direccción;
+    public String getDireccion() {
+        return direccion;
     }
     public int getCp() {
         return cp;
     }
-    public String getPoblación() {
-        return población;
+    public String getPoblacion() {
+        return poblacion;
     }
     public String getProvincia() {
         return provincia;
@@ -63,12 +63,12 @@ public class Estación implements Serializable {
     public void setCp(int cp) {
         this.cp = cp;
     }
-    public void setPoblación(String población) {
-        this.población = población;
+    public void setPoblacion(String poblacion) {
+        this.poblacion = poblacion;
     }
 
-    public void setDireccción(String direccción){
-        this.direccción = direccción;
+    public void setDireccion(String direccion){
+        this.direccion = direccion;
     }
 
     public void addTramoHora(TramoHora t) {
@@ -76,6 +76,6 @@ public class Estación implements Serializable {
     }
     @Override
     public String toString() {
-        return "Estacion{" + "codigo=" + codigo + ", descripcion='" + descripción + '\'' + ", provincia='" + provincia + '\'' + ", poblacion='" + población + '\'' + ", tramos=" + tramos.size() + '}';
+        return "Estacion{" + "codigo=" + codigo + ", descripcion='" + descripcion + '\'' + ", provincia='" + provincia + '\'' + ", poblacion='" + poblacion + '\'' + ", tramos=" + tramos.size() + '}';
     }
 }
