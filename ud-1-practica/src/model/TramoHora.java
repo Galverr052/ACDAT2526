@@ -32,4 +32,12 @@ public class TramoHora implements Serializable {
     public LocalTime getFin() {
         return fin;
     }
+
+    public int getOcupación(){
+        return viajerosSubidos - viajerosBajados;
+    }
+    @Override
+    public String toString(){
+        return inicio + "-" + fin + " (" + viajerosSubidos + "/" + viajerosBajados + ") ";
+    }
 }
