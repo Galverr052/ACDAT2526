@@ -9,8 +9,48 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ControlTrenes {
+
+    public File ocupacion(File fhorarios, int hinicio, int hfin) {
+        File fresult = null;
+        //ubicar
+        if (fhorarios.exists()) {
+            fresult = new File(fhorarios.getParent(), fhorarios.getName().replace(".csv", ".txt"));
+            //Lectura
+            Map<String, Integer> ocupacion = new HashMap<>();
+            String line;
+
+            try (BufferedReader bro = new BufferedReader(new FileReader(fhorarios))) {
+                while ((line = bro.readLine()) != null) {
+                    String[] data = line.split(";");
+                    if (data != null && data.length == 4) {
+
+                        String estacion = data[0];
+                        int viajerosSubidos = Integer.parseInt(data[1]);
+                        int viajerosBajados = Integer.parseInt(data[2]);
+
+                        int total = viajerosSubidos + viajerosBajados;
+                        int oc = total == 0 ? 0 : (int) Math.round(((double) (viajerosSubidos - viajerosBajados) / total) * 100);
+
+                        if (oc < 0) oc = 0;
+
+                    } else
+                        System.err.println("error de conversión");
+                }
+                bro.close();
+                PrintWriter writer = new PrintWriter(new FileWriter(fresult));
+                for (Map.Entry<String, Integer> entry : ocupacion.entrySet()) {
+                    writer.printf("ocupación : " + entry.getKey() + "total", entry.getValue());
+                }
+                writer.close();
+            } catch (IOException e) {
+                System.err.println("Error al generar txt" + e.getMessage());
+            }
+        }
+        return fresult;
+    }
+
     public boolean generarFicheros(File fEstaciones, File fHorarios){
-        File salida = new File(fEstaciones.getParent(), "estaciones.bat");
+        File salida = new File(fEstaciones.getParent(), "estaciones.dat");
 
         try (
             BufferedReader brE = new BufferedReader(new FileReader(fEstaciones));
