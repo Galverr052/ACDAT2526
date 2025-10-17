@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Vuelos SYSTEM "vuelos.dtd">
+
+<Vuelos>
+	<Vuelo>
+		<origen>Sevilla (SEV)</origen>
+		<destino>Londres Standed (LSD)</destino>
+	</Vuelo>
+	<Vuelo>
+		<origen>Jerez de la Frontera (XRZ)</origen>
+		<destino>Berlín Schönefeld (SFX)</destino>
+	</Vuelo>
+</Vuelos>

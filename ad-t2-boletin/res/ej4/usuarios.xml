@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE users [
+	<!-- Reglas de sintaxis -->
+	<!ELEMENT users (user*)>
+	<!ELEMENT user (username,password,horainicio,horafinal?)>
+	
+	<!-- Tipos de datos -->
+	<!ELEMENT username (#PCDATA)>
+	<!ELEMENT password (#PCDATA)>
+	<!ELEMENT horainicio (#PCDATA)>
+	<!ELEMENT horafinal (#PCDATA)>
+]>
+
+<users>
+	<user>
+		<username>ID0034</username>
+		<password>Algo32</password>
+		<horainicio>14:00:50</horainicio>
+		<horafinal>14:02:50</horafinal>
+	</user>
+	<user>
+		<username>ID156</username>
+		<password>Op32eR</password>
+		<horainicio>10:20:50</horainicio>
+		<horafinal>10:34:00</horafinal>		
+	</user>
+	<user>
+		<username>PR12</username>
+		<password>CastEopl1</password>
+		<horainicio>09:20:00</horainicio>
+	</user>
+</users>

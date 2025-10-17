@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE Empleados SYSTEM "empleados.dtd">
+
+<Empleados>
+	<Empleado>
+		<nombre>Juan</nombre>
+		<apellido1>Martínez</apellido1>
+		<apellido2>Soria</apellido2>
+	</Empleado>
+	<Empleado>
+		<nombre>Ana</nombre>
+		<apellido1>Sosa</apellido1>
+		<apellido2>Martín</apellido2>
+	</Empleado>
+	<Empleado>
+		<nombre>José</nombre>
+		<apellido1>López</apellido1>
+		<apellido2>Grau</apellido2>
+	</Empleado>
+</Empleados>

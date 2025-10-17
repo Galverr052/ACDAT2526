@@ -1,0 +1,12 @@
+<!-- Reglas de sintaxis -->
+<!ELEMENT catalogo (juegomesa|videojuego)*>
+<!ELEMENT juegomesa (titulo,stock)>
+<!ELEMENT videojuego (titulo,plataforma,imagenes,stock)>
+<!ELEMENT imagenes (caratula,captura*)>
+
+<!-- Tipos de datos -->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT plataforma (#PCDATA)>
+<!ELEMENT caratula (#PCDATA)>
+<!ELEMENT captura (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>

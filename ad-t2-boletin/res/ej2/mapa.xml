@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE Mapa [
+	<!-- Reglas de sintaxis -->
+	<!ELEMENT Mapa (lugar*)>
+	<!ELEMENT lugar (nombre,punto?)>
+	<!ELEMENT punto (x,y,z)>
+	
+	<!-- Tipos de datos -->
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT x (#PCDATA)>
+	<!ELEMENT y (#PCDATA)>
+	<!ELEMENT z (#PCDATA)>
+]>
+
+<Mapa>
+	<lugar>
+		<nombre>Sevilla</nombre>
+		<punto>
+			<x>-5.84</x>
+			<y>43.36</y>
+			<z>7</z>
+		</punto>
+	</lugar>
+	<lugar>
+		<nombre>Huelva</nombre>
+	</lugar>
+</Mapa>

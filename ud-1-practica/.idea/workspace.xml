@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92a1c35a-b1b0-41da-9e9e-21e3f751b777" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/estaciones.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/horarios.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ControlTrenes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TrenesApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Estacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TramoHora.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ud-1-practica.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +28,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/repositorios GA/ACDAT2526/ud-1-practica&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/usuario/Desktop/repositorios GA/2DAM-ACDAT/ud-2-xml-json"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TrenesApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.TrenesApp" />
@@ -56,6 +45,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ud-1-practica" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ud-1-practica" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

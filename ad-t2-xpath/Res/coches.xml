@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Gramática DTD asociada -->
+<!DOCTYPE catalogo [
+	<!ELEMENT catalogo (coche+)>
+	<!ELEMENT coche (nombre,fabricante,precio,unidades?)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT fabricante (#PCDATA)>
+	<!ELEMENT precio (#PCDATA)>
+	<!ELEMENT unidades (#PCDATA)>
+]>
+
+<catalogo>
+	<coche>
+		<nombre>Clio</nombre>
+		<fabricante>Renault</fabricante>
+		<precio>12000</precio>
+		<unidades>30</unidades>
+	</coche>
+
+	<coche>
+		<nombre>Juke</nombre>
+		<fabricante>Nissan</fabricante>
+		<precio>13000</precio>
+	</coche>
+</catalogo>

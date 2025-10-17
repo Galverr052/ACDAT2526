@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE examen [
+	<!ELEMENT examen (cuestion)+>
+	<!ELEMENT cuestion (pregunta,respuesta?,puntuacion,categoria*)>
+	
+	<!ELEMENT pregunta (#PCDATA)>
+	<!ELEMENT respuesta (#PCDATA)>
+	<!ELEMENT puntuacion (#PCDATA)>
+	<!ELEMENT categoria (#PCDATA)>
+]>
+
+<examen>
+	<cuestion>
+		<pregunta>¿Qué clases principales son usadas en la API de Java para procesar consultas XPath?</pregunta>
+		<respuesta>XPathFactory y XPath</respuesta>
+		<puntuacion>8</puntuacion>
+	</cuestion>
+	<cuestion>
+		<pregunta>¿Qué herramienta binding nativa existe en Java para la vinculación de objetos con documentos XML?</pregunta>
+		<respuesta>JAXB</respuesta>
+		<puntuacion>10</puntuacion>
+		<categoria>AD</categoria>
+	</cuestion>
+	<cuestion>
+		<pregunta>¿Qué frameworks se han usado en el diseño de aplicaciones móviles?</pregunta>
+		<puntuacion>0</puntuacion>
+		<categoria>PMDM</categoria>
+		<categoria>DI</categoria>
+	</cuestion>
+</examen>

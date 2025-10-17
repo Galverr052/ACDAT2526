@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+
+<catalogo>
+	<juegomesa>
+		<titulo>MAGIA BORRAS</titulo>
+		<stock>10</stock>
+	</juegomesa>
+	<videojuego>
+		<titulo>GHOST'N GLOBINS</titulo>
+		<plataforma>NES</plataforma>
+		<imagenes>
+			<caratula>img/ghosts-globins.png</caratula>
+		</imagenes>
+		<stock>12</stock>
+	</videojuego>
+	<videojuego>
+		<titulo>PACMAN</titulo>
+		<plataforma>NES</plataforma>
+		<imagenes>
+			<caratula>img/pacman.png</caratula>
+		</imagenes>
+		<stock>10</stock>
+	</videojuego>
+	<videojuego>
+		<titulo>MARIO BROS</titulo>
+		<plataforma>NES</plataforma>
+		<imagenes>
+			<caratula>img/mario-bros.png</caratula>
+			<captura>img/mario-bros-c1.png</captura>
+			<captura>img/mario-bros-c2.png</captura>
+		</imagenes>
+		<stock>20</stock>
+	</videojuego>
+</catalogo>

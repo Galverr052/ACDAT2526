@@ -1,0 +1,8 @@
+<!-- Reglas de sintaxis -->
+<!ELEMENT Empleados (Empleado*)>
+<!ELEMENT Empleado (nombre,apellido1,apellido2)>
+
+<!-- Tipos de datos -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
