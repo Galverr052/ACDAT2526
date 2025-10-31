@@ -1,0 +1,26 @@
+@Override
+public void endDocument() throws SAXException {
+xmlResult += "Número de empleados: " + Integer.toString(nempleados);
+}
+/**
+* COMIENZO DEL ELEMENTO
+*/
+@Override
+public void startElement(String uri, String nombre, String elemento,
+
+Attributes atts) throws SAXException {
+if (elemento.equals("Empleado"))
+nempleados++;
+
+}
+/**
+* FIN DEL ELEMENTO
+*/
+@Override
+public void endElement(String uri, String nombre, String elemento)
+
+throws SAXException {
+if (elemento.equals("Empleado"))
+xmlResult += "\n";
+
+}

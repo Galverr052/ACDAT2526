@@ -44,13 +44,5 @@ public class GestionarEmpleados {
         }
     }
 
-    public static void main(String args[]) {
-        empleados.GestionarSAX MyParser = new empleados.GestionarSAX();
 
-        if (MyParser.abrir_XML_SAX(new File("C:\\Users\\usuario\\Desktop\\repositorios GA\\ACDAT2526\\ad-t2-boletin\\res\\ej3\\empleados.dtd")) == 0) {
-            // Si el documento se ha parseado correctamente
-            // Mostrar lo procesado por el parser
-            MyParser.imprimirNodos();
-        }
-    }
 }
