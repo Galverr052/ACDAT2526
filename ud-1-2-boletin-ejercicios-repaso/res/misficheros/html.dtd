@@ -1,0 +1,10 @@
+<!ELEMENT html (head,body)>
+<!ELEMENT head (title)>
+<!ELEMENT body (p|br|div|table)*>
+<!ELEMENT table (tr)*>
+<!ELEMENT tr (td)*>
+<!ELEMENT div (p|br|div|table)*>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT p (#PCDATA)>
+<!ELEMENT br EMPTY>
+<!ELEMENT td (#PCDATA)>

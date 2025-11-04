@@ -1,0 +1,30 @@
+mihtml.xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html SYSTEM "html.dtd">
+
+<html>
+	<head>
+		<title>Minihtml</title>
+	</head>
+	<body>
+		<p>Un parrafo</p>
+		<br />
+		<div>
+			<table>
+				<tr>
+					<td>Celda A1</td>
+					<td>Celda B1</td>
+				</tr>
+				<tr>
+					<td>Celda A2</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<table>
+			<tr>
+				<td>Celda A1</td>
+			</tr>
+		</table>
+	</body>
+</html>
