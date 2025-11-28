@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</title>
-    <style>
-        body {text-align: center; }
-        h1 {text-align: center; display: inline-block; padding-bottom: 5px; }
-        .juego {border: 2px solid black; display: inline-block; width: 200px; margin: 15px; vertical-align: top; }
-        img { width: 150px; height: 200px; border: 1px solid black;}
-        .titulo { font-weight: bold; margin-top: 8px; }
-        .plataforma, .stock { font-size: 14px; margin: 2px 0; }
-    </style>
+<meta charset="UTF-8">
+<title>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</title>
+<style>
+    body {
+        background-color: #e6e6e6;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        background-color: #333;
+        color: white;
+        padding: 15px 0;
+        margin: 0;
+        font-size: 28px;
+    }
+
+    table {
+             margin: 20px auto;
+             border-collapse: collapse;   /* sin separación */
+             border: 3px solid #000;      /* <<<<< borde global de la tabla */
+         }
+
+         td {
+             width: 200px;
+             padding: 10px;
+             background-color: white;
+             vertical-align: top;
+             border: 1px solid #000;      /* <<<<< borde de cada celda */
+         }
+
+    img {
+        width: 160px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .titulo {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
 </head>
 <body>
 <h1>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</h1>
-<div id='catalogo'>
-<div class='juego'><img src='img/ghosts-globins.png' alt='GHOST'N GLOBINS' /><div class='titulo'>GHOST'N GLOBINS</div><div class='plataforma'>Consola: NES</div><div class='stock'>Stock actual: 12</div></div><div class='juego'><img src='img/pacman.png' alt='PACMAN' /><div class='titulo'>PACMAN</div><div class='plataforma'>Consola: NES</div><div class='stock'>Stock actual: 10</div></div><div class='juego'><img src='img/mario-bros.png' alt='MARIO BROS' /><div class='titulo'>MARIO BROS</div><div class='plataforma'>Consola: NES</div><div class='stock'>Stock actual: 20</div></div></div></body></html>
+<table>
+<tr>
+<td><img src='img/ghosts-globins.png' alt='GHOST'N GLOBINS'/><br><div class='titulo'>GHOST'N GLOBINS</div><div>Consola: NES</div><div>Stock: 12</div></td><td><img src='img/pacman.png' alt='PACMAN'/><br><div class='titulo'>PACMAN</div><div>Consola: NES</div><div>Stock: 10</div></td><td><img src='img/mario-bros.png' alt='MARIO BROS'/><br><div class='titulo'>MARIO BROS</div><div>Consola: NES</div><div>Stock: 20</div></td></tr>
+</table>
+</body>
+</html>

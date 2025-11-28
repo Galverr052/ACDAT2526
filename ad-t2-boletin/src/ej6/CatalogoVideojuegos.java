@@ -7,18 +7,19 @@ import java.io.*;
 
 public class CatalogoVideojuegos extends DefaultHandler {
 
-    private StringBuilder contenido = new StringBuilder();
+    private static final String RUTA_SALIDA = "res/ej6/catalogo.html";
 
+    private StringBuilder contenido = new StringBuilder();
     private FileWriter fout;
-    private String titulo, plataforma, caratula;
+
+    private String titulo;
+    private String plataforma;
+    private String caratula;
     private int stock;
-    private int contador = 0;
-    private boolean card = false;
 
     public static void main(String[] args) {
         CatalogoVideojuegos app = new CatalogoVideojuegos();
-        String ruta = "res/ej6" + File.separator + "catalogo.xml";
-        app.procesarXML(ruta);
+        app.procesarXML("res/ej6/catalogo.xml");
     }
 
     public void procesarXML(String rutaXML) {
@@ -26,60 +27,104 @@ public class CatalogoVideojuegos extends DefaultHandler {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser parser = factory.newSAXParser();
             parser.parse(new File(rutaXML), this);
-            System.out.println("Archivo se genero correctamente");
+            System.out.println("Archivo HTML generado correctamente.");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    // ----------------------- INICIO DOCUMENTO -------------------------
+
     @Override
     public void startDocument() throws SAXException {
         try {
-            File f = new File("res/ej6" + File.separator + "catalogo.html");
-            fout = new FileWriter(f);
+            fout = new FileWriter(RUTA_SALIDA);
 
             fout.write("""
-                <!DOCTYPE html>
-                <html lang="es">
-                <head>
+                    <!DOCTYPE html>
+                    <html lang="es">
+                    <head>
                     <meta charset="UTF-8">
                     <title>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</title>
                     <style>
-                        body {text-align: center; }
-                        h1 {text-align: center; display: inline-block; padding-bottom: 5px; }
-                        .juego {border: 2px solid black; display: inline-block; width: 200px; margin: 15px; vertical-align: top; }
-                        img { width: 150px; height: 200px; border: 1px solid black;}
-                        .titulo { font-weight: bold; margin-top: 8px; }
-                        .plataforma, .stock { font-size: 14px; margin: 2px 0; }
+                        body {
+                            background-color: #e6e6e6;
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                        }
+                        h1 {
+                            background-color: #333;
+                            color: white;
+                            padding: 15px 0;
+                            margin: 0;
+                            font-size: 28px;
+                        }
+                                    
+                        table {
+                                 margin: 20px auto;
+                                 border-collapse: collapse;   /* sin separación */
+                                 border: 3px solid #000;      /* <<<<< borde global de la tabla */
+                             }
+                             
+                             td {
+                                 width: 200px;
+                                 padding: 10px;
+                                 background-color: white;
+                                 vertical-align: top;
+                                 border: 1px solid #000;      /* <<<<< borde de cada celda */
+                             }
+                                    
+                        img {
+                            width: 160px;
+                            height: 200px;
+                            border: 1px solid black;
+                        }
+                                    
+                        .titulo {
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
                     </style>
-                </head>
-                <body>
-                <h1>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</h1>
-                <div id='catalogo'>
-                """);
+                    </head>
+                    <body>
+                    <h1>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</h1>
+                    <table>
+                    <tr>
+                    """);
 
         } catch (IOException e) {
             throw new SAXException(e);
         }
     }
 
+    // ----------------------- FIN DOCUMENTO -----------------------------
+
     @Override
     public void endDocument() throws SAXException {
         try {
-            fout.write("</div>");
-            fout.write("</body></html>");
+            fout.write("""
+                </tr>
+                </table>
+                </body>
+                </html>
+                """);
             fout.close();
         } catch (IOException e) {
             throw new SAXException(e);
         }
     }
 
+    // ----------------------- ELEMENTOS XML -----------------------------
+
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) {
+    public void startElement(String uri, String localName, String qName, Attributes atts) {
         contenido.setLength(0);
+
         if (qName.equalsIgnoreCase("videojuego")) {
-            card = true;
-            titulo = plataforma = caratula = "";
+            // Reiniciar atributos
+            titulo = "";
+            plataforma = "";
+            caratula = "";
             stock = 0;
         }
     }
@@ -93,26 +138,28 @@ public class CatalogoVideojuegos extends DefaultHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
         String texto = contenido.toString().trim();
 
-        if (!card) return;
-
         switch (qName.toLowerCase()) {
             case "titulo" -> titulo = texto;
             case "plataforma" -> plataforma = texto;
             case "caratula" -> caratula = texto;
-            case "stock" -> stock = Integer.parseInt(texto);
+            case "stock" -> {
+                if (!texto.isEmpty())
+                    stock = Integer.parseInt(texto);
+            }
             case "videojuego" -> escribirJuego();
         }
     }
 
+    // ----------------------- ESCRITURA HTML ----------------------------
+
     private void escribirJuego() throws SAXException {
         try {
-            fout.write("<div class='juego'>");
-            fout.write("<img src='" + caratula + "' alt='" + titulo + "' />");
+            fout.write("<td>");
+            fout.write("<img src='" + caratula + "' alt='" + titulo + "'/><br>");
             fout.write("<div class='titulo'>" + titulo + "</div>");
-            fout.write("<div class='plataforma'>Consola: " + plataforma + "</div>");
-            fout.write("<div class='stock'>Stock actual: " + stock + "</div>");
-            fout.write("</div>");
-            contador++;
+            fout.write("<div>Consola: " + plataforma + "</div>");
+            fout.write("<div>Stock: " + stock + "</div>");
+            fout.write("</td>");
         } catch (IOException e) {
             throw new SAXException(e);
         }
