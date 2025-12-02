@@ -1,6 +1,8 @@
 package iesmm.ad.t3_01;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -51,21 +53,10 @@ public class LoginValidator {
                 idempleado = Integer.parseInt(input.nextLine()); // input.nextInt() no captura retorno de carro
 
                 // Crear y preparar objeto para ejecutar la sentencias SQL
-                CallableStatement loginStatement = connection.prepareCall("{ ? = call es empleado_valido(?, ?) }");
-                loginStatement.registerOutParameter(1, Types.BOOLEAN);
-                loginStatement.setInt(2, idempleado);
-                loginStatement.setString(3, email);
-                loginStatement.execute();
+
 
                 // Obtener resultados a mostrar
-                es_login_valido = loginStatement.getBoolean(1);
 
-                if(es_login_valido)
-                    System.out.println("Entrada al sistema de: "+ email);
-                else {
-                    System.out.println("Error de autentificación");
-                    nintentos++;
-                }
 
             } while (!es_login_valido && nintentos < MAX_INTENTOS);
 

@@ -7,5 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="ucanaccess-5.0.1" level="project" />
+    <orderEntry type="library" name="commons-lang-2.6" level="project" />
+    <orderEntry type="library" name="jdbc-odbc-bridge-jre7" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.8.1" level="project" />
   </component>
 </module>

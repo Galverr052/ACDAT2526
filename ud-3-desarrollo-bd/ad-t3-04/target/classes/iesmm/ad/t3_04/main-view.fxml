@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iesmm.ad.t3_04.controller.MainController">
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Label text="id">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="titulo">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="autor">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="año">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="páginas">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="168.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+            <children>
+                <TextField fx:id="idField" />
+                <TextField fx:id="tituloField" />
+                <TextField fx:id="autorField" />
+                <TextField fx:id="anioField" />
+                <TextField fx:id="paginasField" />
+            </children>
+        </VBox>
+        <HBox layoutX="29.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="80.0" text="Insertar" />
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="80.0" text="Actualizar" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="80.0" text="Eliminar" />
+            </children>
+        </HBox>
+        <TableView fx:id="TableView" layoutX="318.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="35.0" text="id" />
+                <TableColumn fx:id="tituloColumn" prefWidth="120.0" text="titulo" />
+                <TableColumn fx:id="autorColumn" prefWidth="120.0" text="autor" />
+                <TableColumn fx:id="anioColumn" prefWidth="60.0" text="año" />
+                <TableColumn fx:id="paginasColumn" prefWidth="60.0" text="paginas" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
